@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('/src/assets/fonts/Calibre-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono';
+  src: url('/src/assets/fonts/SFMono.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre-bold';
+  src: url('/src/assets/fonts/Calibre-Semibold.woff2') format('woff2');
+  font-weight: semibold;
+  font-style: normal;
+}
+
+
+
+nav {
+  font-family: 'Mono', sans-serif;
+ 
+}
+body {
+  background-color: #0a192f;
+}
+
+main {
+  background-color: #0a192f;
+}
+section {
+
+  margin: 0px auto;
+  padding: 100px 0px;
+  max-width: 1000px;
+}
+
+
+.spotlight {
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background: radial-gradient( rgb(255 255 255 / 10%), transparent 80%);
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  background-color: transparent;
+  height: auto;
+  width: auto;
+  border-radius: 1rem;
+  transition: transform 0.1s ease-in-out;
+  position: relative;
+  color: white;
+  padding: 2rem 4rem;
+  
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 15px 15px rgba(0, 0, 0, 0.22);
+}
+
+.MuiTabs-indicator {
+  background-color: 
+  #51cfb6 !important;
+ 
+}
+.MuiTab-root {
+  color: #ccd6f6 !important; /* Texto blanco */
+  font-family: 'Mono' !important; /* Fuente monoespaciada */
+  font-size: 12px!important;
+}
+.MuiTab-root.Mui-selected {
+  color: #51cfb6 !important; /* Texto azul para la pestaña seleccionada */
+}
+
+.text-container {
+  font-family: 'Calibre', sans-serif;
+  color: rgba(255, 255, 255, 0.082);
+}
+
+.text-line {
+  display: flex;
+  font-size: 7rem;
+  align-items: center;
+}
+
+.text-char,
+.text-button {
+  position: relative;
+  padding: 0 2px;
+}
+
+.text-char::after,
+.text-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0a192f;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.text-char.revealed::after,
+.text-button.revealed::after {
+  opacity: 0;
+}
+
+.text-button {
+  display: flex;
+  font-size: 1rem;
+  color: #51cfb6;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid transparent; /* Inicialmente transparente */
+  cursor: pointer;
+  padding: 7px 20px;
+  margin-top: 10px;
+  align-items: center;
+  padding-top: 10px;
+  font-family: 'Mono';
+ 
+  opacity: 100;
+}
+
+.text-button.revealed {
+  border: 1px solid #51cfb6; /* Visible cuando revelado */
+}
+
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      350px,
+      1fr
+    )
+  );
+  gap: 60px;
+  padding: 10px;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 100%!important; /* Ancho de la barra de desplazamiento */
+  height: 10px;
+  
+}
+
+
+
+html::-webkit-scrollbar-track {
+  background: #332c2c00; /* Color de fondo de la barra */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #888; /* Color del pulgar (la parte móvil) */
+}
